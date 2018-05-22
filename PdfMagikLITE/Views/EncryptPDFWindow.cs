@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Roarshin.QPDF;
@@ -14,6 +15,7 @@ namespace PdfMagikLITE.Views {
     public partial class EncryptPDFWindow : Form {
 
         private bool _createCopy = false;
+        private bool _runProgress = false;
         private bool _showPassword = false;
 
         private string _selectedFilePath = string.Empty;
@@ -37,7 +39,26 @@ namespace PdfMagikLITE.Views {
             return string.Join(".", aPath);
         }
 
+        private void EnableViewWindow() {
+            txtBoxSelectedFile.Enabled = !txtBoxSelectedFile.Enabled;
+            txtBoxDestinationFile.Enabled = !txtBoxDestinationFile.Enabled;
+            txtboxPassword.Enabled = !txtboxPassword.Enabled;
+
+            chkCreateCopy.Enabled = !chkCreateCopy.Enabled;
+            chkShowPassword.Enabled = !chkShowPassword.Enabled;
+
+            btnBrowseSelected.Enabled = !btnBrowseSelected.Enabled;
+            btnBrowseDestination.Enabled = !btnBrowseDestination.Enabled;
+
+            btnOkay.Enabled = !btnOkay.Enabled;
+            btnCancel.Enabled = !btnCancel.Enabled;
+        }
+
         private void EncryptPDF() {
+            this.EnableViewWindow();
+            _runProgress = true;
+            bckGroundProgress.RunWorkerAsync();
+            
             byte[] copiedFile = File.ReadAllBytes(_selectedFilePath);
             using (Stream ms = new MemoryStream()) {
 
@@ -64,6 +85,13 @@ namespace PdfMagikLITE.Views {
 
             // message the user as the process/task/encryption has been completed
             MessageBox.Show("Your PDF has now been protected with the assigned password.", "PDFMagikLITE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+            this.EnableViewWindow();
+            _runProgress = false;
+            bckGroundProgress.CancelAsync();
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         #region Events
@@ -88,8 +116,24 @@ namespace PdfMagikLITE.Views {
             this.Close();
         }
 
-        #endregion
+        private void bckGroundProgress_DoWork(object sender, DoWorkEventArgs e) {
+            int counter = 1;
 
-        
+            do {
+                bckGroundProgress.ReportProgress(counter);
+                Thread.Sleep(100);
+
+                counter++;
+                if (counter > 100) {
+                    counter = 1;
+                }
+            } while (_runProgress);
+        }
+
+        private void bckGroundProgress_ProgressChanged(object sender, ProgressChangedEventArgs e) {
+            progBarEncrypt.Value = e.ProgressPercentage;
+        }
+
+        #endregion
     }
 }

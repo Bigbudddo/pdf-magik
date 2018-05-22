@@ -37,9 +37,10 @@
             this.grpBoxSettings = new System.Windows.Forms.GroupBox();
             this.grpBoxPassword = new System.Windows.Forms.GroupBox();
             this.lblSelectedFiles = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBrowseSelected = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBrowseDestination = new System.Windows.Forms.Button();
+            this.bckGroundProgress = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.grpBoxSettings.SuspendLayout();
             this.grpBoxPassword.SuspendLayout();
@@ -155,9 +156,9 @@
             // 
             this.grpBoxSettings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpBoxSettings.Controls.Add(this.button2);
+            this.grpBoxSettings.Controls.Add(this.btnBrowseDestination);
             this.grpBoxSettings.Controls.Add(this.label2);
-            this.grpBoxSettings.Controls.Add(this.button1);
+            this.grpBoxSettings.Controls.Add(this.btnBrowseSelected);
             this.grpBoxSettings.Controls.Add(this.lblSelectedFiles);
             this.grpBoxSettings.Controls.Add(this.txtBoxSelectedFile);
             this.grpBoxSettings.Controls.Add(this.txtBoxDestinationFile);
@@ -193,15 +194,15 @@
             this.lblSelectedFiles.TabIndex = 2;
             this.lblSelectedFiles.Text = "Selected File";
             // 
-            // button1
+            // btnBrowseSelected
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(338, 41);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 20);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Browse";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBrowseSelected.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBrowseSelected.Location = new System.Drawing.Point(338, 41);
+            this.btnBrowseSelected.Name = "btnBrowseSelected";
+            this.btnBrowseSelected.Size = new System.Drawing.Size(75, 20);
+            this.btnBrowseSelected.TabIndex = 3;
+            this.btnBrowseSelected.Text = "Browse";
+            this.btnBrowseSelected.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -214,15 +215,20 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Output Destination:";
             // 
-            // button2
+            // btnBrowseDestination
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(338, 80);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 20);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Browse";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBrowseDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBrowseDestination.Location = new System.Drawing.Point(338, 80);
+            this.btnBrowseDestination.Name = "btnBrowseDestination";
+            this.btnBrowseDestination.Size = new System.Drawing.Size(75, 20);
+            this.btnBrowseDestination.TabIndex = 6;
+            this.btnBrowseDestination.Text = "Browse";
+            this.btnBrowseDestination.UseVisualStyleBackColor = true;
+            // 
+            // bckGroundProgress
+            // 
+            this.bckGroundProgress.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bckGroundProgress_DoWork);
+            this.bckGroundProgress.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bckGroundProgress_ProgressChanged);
             // 
             // EncryptPDFWindow
             // 
@@ -269,7 +275,8 @@
         private System.Windows.Forms.GroupBox grpBoxPassword;
         private System.Windows.Forms.Label lblSelectedFiles;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBrowseSelected;
+        private System.Windows.Forms.Button btnBrowseDestination;
+        private System.ComponentModel.BackgroundWorker bckGroundProgress;
     }
 }
