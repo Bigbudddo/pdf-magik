@@ -61,7 +61,7 @@
             // 
             this.txtBoxSelectedFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxSelectedFile.Location = new System.Drawing.Point(11, 41);
+            this.txtBoxSelectedFile.Location = new System.Drawing.Point(11, 40);
             this.txtBoxSelectedFile.Name = "txtBoxSelectedFile";
             this.txtBoxSelectedFile.Size = new System.Drawing.Size(321, 20);
             this.txtBoxSelectedFile.TabIndex = 1;
@@ -70,7 +70,7 @@
             // 
             this.txtBoxDestinationFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxDestinationFile.Location = new System.Drawing.Point(11, 80);
+            this.txtBoxDestinationFile.Location = new System.Drawing.Point(11, 94);
             this.txtBoxDestinationFile.Name = "txtBoxDestinationFile";
             this.txtBoxDestinationFile.Size = new System.Drawing.Size(321, 20);
             this.txtBoxDestinationFile.TabIndex = 2;
@@ -82,6 +82,7 @@
             this.txtboxPassword.Location = new System.Drawing.Point(11, 24);
             this.txtboxPassword.MaxLength = 16;
             this.txtboxPassword.Name = "txtboxPassword";
+            this.txtboxPassword.PasswordChar = '*';
             this.txtboxPassword.Size = new System.Drawing.Size(401, 20);
             this.txtboxPassword.TabIndex = 3;
             // 
@@ -89,10 +90,9 @@
             // 
             this.chkShowPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkShowPassword.AutoSize = true;
             this.chkShowPassword.Location = new System.Drawing.Point(11, 50);
             this.chkShowPassword.Name = "chkShowPassword";
-            this.chkShowPassword.Size = new System.Drawing.Size(102, 17);
+            this.chkShowPassword.Size = new System.Drawing.Size(401, 17);
             this.chkShowPassword.TabIndex = 4;
             this.chkShowPassword.Text = "Show Password";
             this.chkShowPassword.UseVisualStyleBackColor = true;
@@ -101,10 +101,9 @@
             // chkCreateCopy
             // 
             this.chkCreateCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.chkCreateCopy.AutoSize = true;
-            this.chkCreateCopy.Location = new System.Drawing.Point(11, 111);
+            this.chkCreateCopy.Location = new System.Drawing.Point(11, 131);
             this.chkCreateCopy.Name = "chkCreateCopy";
-            this.chkCreateCopy.Size = new System.Drawing.Size(143, 17);
+            this.chkCreateCopy.Size = new System.Drawing.Size(401, 17);
             this.chkCreateCopy.TabIndex = 5;
             this.chkCreateCopy.Text = "Create unprotected copy";
             this.chkCreateCopy.UseVisualStyleBackColor = true;
@@ -113,7 +112,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(357, 366);
+            this.btnCancel.Location = new System.Drawing.Point(357, 387);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 6;
@@ -124,7 +123,7 @@
             // btnOkay
             // 
             this.btnOkay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOkay.Location = new System.Drawing.Point(276, 366);
+            this.btnOkay.Location = new System.Drawing.Point(276, 387);
             this.btnOkay.Name = "btnOkay";
             this.btnOkay.Size = new System.Drawing.Size(75, 23);
             this.btnOkay.TabIndex = 7;
@@ -136,7 +135,7 @@
             // 
             this.progBarEncrypt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progBarEncrypt.Location = new System.Drawing.Point(12, 337);
+            this.progBarEncrypt.Location = new System.Drawing.Point(12, 358);
             this.progBarEncrypt.Name = "progBarEncrypt";
             this.progBarEncrypt.Size = new System.Drawing.Size(420, 23);
             this.progBarEncrypt.TabIndex = 8;
@@ -165,7 +164,7 @@
             this.grpBoxSettings.Controls.Add(this.chkCreateCopy);
             this.grpBoxSettings.Location = new System.Drawing.Point(12, 119);
             this.grpBoxSettings.Name = "grpBoxSettings";
-            this.grpBoxSettings.Size = new System.Drawing.Size(421, 134);
+            this.grpBoxSettings.Size = new System.Drawing.Size(421, 154);
             this.grpBoxSettings.TabIndex = 10;
             this.grpBoxSettings.TabStop = false;
             this.grpBoxSettings.Text = "File Settings";
@@ -176,7 +175,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpBoxPassword.Controls.Add(this.txtboxPassword);
             this.grpBoxPassword.Controls.Add(this.chkShowPassword);
-            this.grpBoxPassword.Location = new System.Drawing.Point(12, 258);
+            this.grpBoxPassword.Location = new System.Drawing.Point(12, 279);
             this.grpBoxPassword.Name = "grpBoxPassword";
             this.grpBoxPassword.Size = new System.Drawing.Size(420, 73);
             this.grpBoxPassword.TabIndex = 11;
@@ -188,7 +187,7 @@
             this.lblSelectedFiles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSelectedFiles.AutoSize = true;
-            this.lblSelectedFiles.Location = new System.Drawing.Point(15, 25);
+            this.lblSelectedFiles.Location = new System.Drawing.Point(15, 16);
             this.lblSelectedFiles.Name = "lblSelectedFiles";
             this.lblSelectedFiles.Size = new System.Drawing.Size(68, 13);
             this.lblSelectedFiles.TabIndex = 2;
@@ -197,19 +196,20 @@
             // btnBrowseSelected
             // 
             this.btnBrowseSelected.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowseSelected.Location = new System.Drawing.Point(338, 41);
+            this.btnBrowseSelected.Location = new System.Drawing.Point(340, 40);
             this.btnBrowseSelected.Name = "btnBrowseSelected";
             this.btnBrowseSelected.Size = new System.Drawing.Size(75, 20);
             this.btnBrowseSelected.TabIndex = 3;
             this.btnBrowseSelected.Text = "Browse";
             this.btnBrowseSelected.UseVisualStyleBackColor = true;
+            this.btnBrowseSelected.Click += new System.EventHandler(this.btnBrowseSelected_Click);
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 64);
+            this.label2.Location = new System.Drawing.Point(15, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 13);
             this.label2.TabIndex = 4;
@@ -218,12 +218,13 @@
             // btnBrowseDestination
             // 
             this.btnBrowseDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowseDestination.Location = new System.Drawing.Point(338, 80);
+            this.btnBrowseDestination.Location = new System.Drawing.Point(340, 94);
             this.btnBrowseDestination.Name = "btnBrowseDestination";
             this.btnBrowseDestination.Size = new System.Drawing.Size(75, 20);
             this.btnBrowseDestination.TabIndex = 6;
             this.btnBrowseDestination.Text = "Browse";
             this.btnBrowseDestination.UseVisualStyleBackColor = true;
+            this.btnBrowseDestination.Click += new System.EventHandler(this.btnBrowseDestination_Click);
             // 
             // bckGroundProgress
             // 
@@ -235,7 +236,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(444, 401);
+            this.ClientSize = new System.Drawing.Size(444, 422);
             this.Controls.Add(this.grpBoxPassword);
             this.Controls.Add(this.grpBoxSettings);
             this.Controls.Add(this.picLogo);

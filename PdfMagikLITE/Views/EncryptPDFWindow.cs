@@ -56,10 +56,13 @@ namespace PdfMagikLITE.Views {
 
         private void EncryptPDF() {
             this.EnableViewWindow();
+            LoadValuesFromView();
+
             _runProgress = true;
-            bckGroundProgress.RunWorkerAsync();
+            //bckGroundProgress.RunWorkerAsync();
             
             byte[] copiedFile = File.ReadAllBytes(_selectedFilePath);
+            byte[] encryptedFile = null;
             using (Stream ms = new MemoryStream()) {
 
                 var document = new QPDFDocument {
@@ -88,10 +91,16 @@ namespace PdfMagikLITE.Views {
             
             this.EnableViewWindow();
             _runProgress = false;
-            bckGroundProgress.CancelAsync();
+            //bckGroundProgress.CancelAsync();
 
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void LoadValuesFromView() {
+            _selectedFilePath = txtBoxSelectedFile.Text;
+            _destinationFilePath = txtBoxDestinationFile.Text;
+            _encryptedPassword = txtboxPassword.Text;
         }
 
         #region Events
@@ -114,6 +123,33 @@ namespace PdfMagikLITE.Views {
         private void btnCancel_Click(object sender, EventArgs e) {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void btnBrowseSelected_Click(object sender, EventArgs e) {
+            var dialog = new OpenFileDialog();
+            dialog.Filter = "PDF|*.pdf";
+            dialog.Title = "Select a PDF to Encrypt";
+            dialog.Multiselect = false;
+
+            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK) {
+                if (!String.IsNullOrWhiteSpace(dialog.FileName) && File.Exists(dialog.FileName)) {
+                    _selectedFilePath = dialog.FileName;
+                    txtBoxSelectedFile.Text = _selectedFilePath;
+                }
+            }
+        }
+
+        private void btnBrowseDestination_Click(object sender, EventArgs e) {
+            var dialog = new SaveFileDialog();
+            dialog.Filter = "PDF|*.pdf";
+            dialog.Title = "PDF Destination";
+
+            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK) {
+                if (!String.IsNullOrWhiteSpace(dialog.FileName)) {
+                    _destinationFilePath = dialog.FileName;
+                    txtBoxDestinationFile.Text = _destinationFilePath;
+                }
+            }
         }
 
         private void bckGroundProgress_DoWork(object sender, DoWorkEventArgs e) {

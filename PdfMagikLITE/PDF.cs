@@ -12,7 +12,7 @@ using PdfMagikLITE.Views;
 namespace PdfMagikLITE {
     
     [ComVisible(true)]
-    [COMServerAssociation(AssociationType.ClassOfExtension, ".pdf")]
+    [COMServerAssociation(AssociationType.AllFiles)]
     public class PDF : SharpContextMenu {
 
         private ContextMenuStrip _menu = new ContextMenuStrip();
