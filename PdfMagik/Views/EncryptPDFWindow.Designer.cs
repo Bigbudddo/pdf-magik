@@ -1,4 +1,4 @@
-﻿namespace PdfMagikLITE.Views {
+﻿namespace PdfMagik.Views {
     partial class EncryptPDFWindow {
         /// <summary>
         /// Required designer variable.
@@ -142,9 +142,9 @@
             // 
             // picLogo
             // 
-            this.picLogo.BackgroundImage = global::PdfMagikLITE.Properties.Resources.app_icon_large;
+            this.picLogo.BackgroundImage = global::PdfMagik.Properties.Resources.app_icon_large;
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picLogo.InitialImage = global::PdfMagikLITE.Properties.Resources.app_icon_large;
+            this.picLogo.InitialImage = global::PdfMagik.Properties.Resources.app_icon_large;
             this.picLogo.Location = new System.Drawing.Point(12, 12);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(113, 101);

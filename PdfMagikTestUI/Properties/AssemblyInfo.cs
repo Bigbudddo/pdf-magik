@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PdfMagikLITE")]
+[assembly: AssemblyTitle("PdfMagikTestUI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PdfMagikLITE")]
+[assembly: AssemblyProduct("PdfMagikTestUI")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("19aa8976-e0a7-4d36-bb14-38de2117251a")]
+[assembly: Guid("c83aab95-6ae7-49e3-a2c8-fa16b87f9e96")]
 
 // Version information for an assembly consists of the following four values:
 //

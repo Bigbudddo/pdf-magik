@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Roarshin.QPDF;
 
-namespace PdfMagikLITE.Views {
+namespace PdfMagik.Views {
     public partial class EncryptPDFWindow : Form {
 
         private bool _createCopy = false;
@@ -74,7 +74,7 @@ namespace PdfMagikLITE.Views {
                     OutputFilePath = _destinationFilePath
                 };
 
-                QPDF.EncryptPDF(document, output);
+                QPDF.ModifyPDF(document, output);
             }
 
             // Spit the copied file in memory back out..?

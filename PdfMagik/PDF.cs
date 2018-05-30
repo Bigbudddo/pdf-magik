@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SharpShell.Attributes;
 using SharpShell.SharpContextMenu;
-using PdfMagikLITE.Views;
+using PdfMagik.Views;
 
-namespace PdfMagikLITE {
+namespace PdfMagik {
     
     [ComVisible(true)]
     [COMServerAssociation(AssociationType.AllFiles)]
@@ -34,9 +34,9 @@ namespace PdfMagikLITE {
             _menu.Items.Clear();
 
             var menuItem = new ToolStripMenuItem {
-                Text = "Encrypt PDF",
+                Text = "Modify PDF",
                 Image = Properties.Resources.app_icon_small,
-                ToolTipText = "Password protect your PDF file"
+                ToolTipText = "Modify the encryption/setting of your PDF file"
             };
 
             menuItem.Click += (sender, args) => EncryptPDF();
@@ -66,18 +66,16 @@ namespace PdfMagikLITE {
         private void EncryptPDF() {
             try {
                 if (base.SelectedItemPaths.Count() == 0 || base.SelectedItemPaths.Count() > 1) {
-                    MessageBox.Show("Invalid selection has occured.", "PDFMagikLITE: error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Invalid selection has occured.", "PDF Magik - Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
 
                 string selectedPDFPath = base.SelectedItemPaths.First();
-                string coreDestinationPath = base.SelectedItemPaths.First();
-
-                var window = new EncryptPDFWindow(coreDestinationPath, selectedPDFPath);
+                var window = new PropertyWindow(selectedPDFPath, "", true);
                 window.Show();
             }
             catch (Exception ex) {
-                MessageBox.Show(ex.Message, "PDFMagikLITE: error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(ex.Message, "PDF Magik - Critical Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

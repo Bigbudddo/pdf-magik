@@ -7,8 +7,8 @@
     <ProjectGuid>{5818FF6E-7F69-4A8E-A38B-722F9055A4C0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PdfMagikLITE</RootNamespace>
-    <AssemblyName>PdfMagikLITE</AssemblyName>
+    <RootNamespace>PdfMagik</RootNamespace>
+    <AssemblyName>PdfMagik</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -59,14 +59,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Views\EncryptPDFWindow.cs">
+    <Compile Include="Views\PropertyWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\EncryptPDFWindow.Designer.cs">
-      <DependentUpon>EncryptPDFWindow.cs</DependentUpon>
+    <Compile Include="Views\PropertyWindow.Designer.cs">
+      <DependentUpon>PropertyWindow.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Content\icon_lock_64_64.png" />
     <Content Include="Setup\PDFMagikInstaller.iss" />
     <None Include="Content\app_icon_small.png" />
     <None Include="Content\app_icon_medium.png" />
@@ -83,8 +84,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\EncryptPDFWindow.resx">
-      <DependentUpon>EncryptPDFWindow.cs</DependentUpon>
+    <EmbeddedResource Include="Views\PropertyWindow.resx">
+      <DependentUpon>PropertyWindow.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
