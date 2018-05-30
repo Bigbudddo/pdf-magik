@@ -71,7 +71,7 @@ namespace PdfMagik {
                 }
 
                 string selectedPDFPath = base.SelectedItemPaths.First();
-                var window = new PropertyWindow(selectedPDFPath, "", true);
+                var window = new PropertyWindow(selectedPDFPath, selectedPDFPath, false);
                 window.Show();
             }
             catch (Exception ex) {

@@ -197,10 +197,9 @@
             // 
             // rdoPagB
             // 
-            this.rdoPagB.AutoSize = true;
             this.rdoPagB.Location = new System.Drawing.Point(9, 42);
             this.rdoPagB.Name = "rdoPagB";
-            this.rdoPagB.Size = new System.Drawing.Size(88, 17);
+            this.rdoPagB.Size = new System.Drawing.Size(475, 17);
             this.rdoPagB.TabIndex = 1;
             this.rdoPagB.Text = "Select Pages";
             this.rdoPagB.UseVisualStyleBackColor = true;
@@ -208,11 +207,10 @@
             // 
             // rdoPagA
             // 
-            this.rdoPagA.AutoSize = true;
             this.rdoPagA.Checked = true;
             this.rdoPagA.Location = new System.Drawing.Point(9, 19);
             this.rdoPagA.Name = "rdoPagA";
-            this.rdoPagA.Size = new System.Drawing.Size(69, 17);
+            this.rdoPagA.Size = new System.Drawing.Size(475, 17);
             this.rdoPagA.TabIndex = 0;
             this.rdoPagA.TabStop = true;
             this.rdoPagA.Text = "All Pages";
@@ -346,10 +344,9 @@
             // 
             // rdoEncC
             // 
-            this.rdoEncC.AutoSize = true;
             this.rdoEncC.Location = new System.Drawing.Point(9, 65);
             this.rdoEncC.Name = "rdoEncC";
-            this.rdoEncC.Size = new System.Drawing.Size(122, 17);
+            this.rdoEncC.Size = new System.Drawing.Size(382, 17);
             this.rdoEncC.TabIndex = 2;
             this.rdoEncC.Text = "Decrypt and Encrypt";
             this.rdoEncC.UseVisualStyleBackColor = true;
@@ -357,10 +354,9 @@
             // 
             // rdoEncB
             // 
-            this.rdoEncB.AutoSize = true;
             this.rdoEncB.Location = new System.Drawing.Point(9, 42);
             this.rdoEncB.Name = "rdoEncB";
-            this.rdoEncB.Size = new System.Drawing.Size(86, 17);
+            this.rdoEncB.Size = new System.Drawing.Size(382, 17);
             this.rdoEncB.TabIndex = 1;
             this.rdoEncB.Text = "Decrypt Only";
             this.rdoEncB.UseVisualStyleBackColor = true;
@@ -368,11 +364,10 @@
             // 
             // rdoEncA
             // 
-            this.rdoEncA.AutoSize = true;
             this.rdoEncA.Checked = true;
             this.rdoEncA.Location = new System.Drawing.Point(9, 19);
             this.rdoEncA.Name = "rdoEncA";
-            this.rdoEncA.Size = new System.Drawing.Size(51, 17);
+            this.rdoEncA.Size = new System.Drawing.Size(382, 17);
             this.rdoEncA.TabIndex = 0;
             this.rdoEncA.TabStop = true;
             this.rdoEncA.Text = "None";
@@ -397,10 +392,9 @@
             // 
             this.chkGraphicExtraction.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkGraphicExtraction.AutoSize = true;
             this.chkGraphicExtraction.Location = new System.Drawing.Point(6, 42);
             this.chkGraphicExtraction.Name = "chkGraphicExtraction";
-            this.chkGraphicExtraction.Size = new System.Drawing.Size(160, 17);
+            this.chkGraphicExtraction.Size = new System.Drawing.Size(220, 17);
             this.chkGraphicExtraction.TabIndex = 1;
             this.chkGraphicExtraction.Text = "Allow text/graphic extraction";
             this.chkGraphicExtraction.UseVisualStyleBackColor = true;
@@ -409,12 +403,11 @@
             // 
             this.chkAccessibility.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkAccessibility.AutoSize = true;
             this.chkAccessibility.Checked = true;
             this.chkAccessibility.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkAccessibility.Location = new System.Drawing.Point(6, 19);
             this.chkAccessibility.Name = "chkAccessibility";
-            this.chkAccessibility.Size = new System.Drawing.Size(151, 17);
+            this.chkAccessibility.Size = new System.Drawing.Size(220, 17);
             this.chkAccessibility.TabIndex = 0;
             this.chkAccessibility.Text = "Allow accessibility features";
             this.chkAccessibility.UseVisualStyleBackColor = true;
@@ -440,11 +433,10 @@
             // 
             this.rdoModE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdoModE.AutoSize = true;
             this.rdoModE.Checked = true;
             this.rdoModE.Location = new System.Drawing.Point(6, 111);
             this.rdoModE.Name = "rdoModE";
-            this.rdoModE.Size = new System.Drawing.Size(129, 17);
+            this.rdoModE.Size = new System.Drawing.Size(478, 17);
             this.rdoModE.TabIndex = 4;
             this.rdoModE.TabStop = true;
             this.rdoModE.Text = "Disallow Modifications";
@@ -455,10 +447,9 @@
             // 
             this.rdoModD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdoModD.AutoSize = true;
             this.rdoModD.Location = new System.Drawing.Point(6, 88);
             this.rdoModD.Name = "rdoModD";
-            this.rdoModD.Size = new System.Drawing.Size(168, 17);
+            this.rdoModD.Size = new System.Drawing.Size(478, 17);
             this.rdoModD.TabIndex = 3;
             this.rdoModD.Text = "Allow document assembly only";
             this.rdoModD.UseVisualStyleBackColor = true;
@@ -468,10 +459,9 @@
             // 
             this.rdoModC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdoModC.AutoSize = true;
             this.rdoModC.Location = new System.Drawing.Point(6, 65);
             this.rdoModC.Name = "rdoModC";
-            this.rdoModC.Size = new System.Drawing.Size(175, 17);
+            this.rdoModC.Size = new System.Drawing.Size(478, 17);
             this.rdoModC.TabIndex = 2;
             this.rdoModC.Text = "Allow form field fill-in and signing";
             this.rdoModC.UseVisualStyleBackColor = true;
@@ -481,10 +471,9 @@
             // 
             this.rdoModB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdoModB.AutoSize = true;
             this.rdoModB.Location = new System.Drawing.Point(6, 42);
             this.rdoModB.Name = "rdoModB";
-            this.rdoModB.Size = new System.Drawing.Size(239, 17);
+            this.rdoModB.Size = new System.Drawing.Size(478, 17);
             this.rdoModB.TabIndex = 1;
             this.rdoModB.Text = "Allow comment authoring and form operations";
             this.rdoModB.UseVisualStyleBackColor = true;
@@ -494,10 +483,9 @@
             // 
             this.rdoModA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdoModA.AutoSize = true;
             this.rdoModA.Location = new System.Drawing.Point(6, 19);
             this.rdoModA.Name = "rdoModA";
-            this.rdoModA.Size = new System.Drawing.Size(175, 17);
+            this.rdoModA.Size = new System.Drawing.Size(478, 17);
             this.rdoModA.TabIndex = 0;
             this.rdoModA.Text = "Allow full document modification";
             this.rdoModA.UseVisualStyleBackColor = true;
@@ -522,10 +510,9 @@
             // 
             this.rdoPrnC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdoPrnC.AutoSize = true;
             this.rdoPrnC.Location = new System.Drawing.Point(6, 65);
             this.rdoPrnC.Name = "rdoPrnC";
-            this.rdoPrnC.Size = new System.Drawing.Size(102, 17);
+            this.rdoPrnC.Size = new System.Drawing.Size(240, 17);
             this.rdoPrnC.TabIndex = 2;
             this.rdoPrnC.Text = "Disallow Printing";
             this.rdoPrnC.UseVisualStyleBackColor = true;
@@ -535,10 +522,9 @@
             // 
             this.rdoPrnB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdoPrnB.AutoSize = true;
             this.rdoPrnB.Location = new System.Drawing.Point(6, 42);
             this.rdoPrnB.Name = "rdoPrnB";
-            this.rdoPrnB.Size = new System.Drawing.Size(176, 17);
+            this.rdoPrnB.Size = new System.Drawing.Size(240, 17);
             this.rdoPrnB.TabIndex = 1;
             this.rdoPrnB.Text = "Allow low-resolution printing only";
             this.rdoPrnB.UseVisualStyleBackColor = true;
@@ -548,11 +534,10 @@
             // 
             this.rdoPrnA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdoPrnA.AutoSize = true;
             this.rdoPrnA.Checked = true;
             this.rdoPrnA.Location = new System.Drawing.Point(6, 19);
             this.rdoPrnA.Name = "rdoPrnA";
-            this.rdoPrnA.Size = new System.Drawing.Size(104, 17);
+            this.rdoPrnA.Size = new System.Drawing.Size(240, 17);
             this.rdoPrnA.TabIndex = 0;
             this.rdoPrnA.TabStop = true;
             this.rdoPrnA.Text = "Allow full Printing";
@@ -675,13 +660,9 @@
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grpEncryptionOptions.ResumeLayout(false);
-            this.grpEncryptionOptions.PerformLayout();
             this.grpAdditionalSettings.ResumeLayout(false);
-            this.grpAdditionalSettings.PerformLayout();
             this.grpModifyOptions.ResumeLayout(false);
-            this.grpModifyOptions.PerformLayout();
             this.grpPrintOptions.ResumeLayout(false);
-            this.grpPrintOptions.PerformLayout();
             this.grpPassword.ResumeLayout(false);
             this.grpPassword.PerformLayout();
             this.ResumeLayout(false);
